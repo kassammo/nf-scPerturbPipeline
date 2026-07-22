@@ -1,0 +1,52 @@
+# Author: Mohamed Kassam
+# Date: 2026-07-19
+# Purpose: Default analysis parameters. Biological reference levels belong in the experiment YAML.
+
+species: human
+seed: 42
+metadata:
+  required_columns: [treatment, cell_line, replicate]
+references:
+  treatment: Control
+  perturbation: NoGuide
+visualization:
+  group_by: [treatment, perturbation]
+assays:
+  gene_expression: Gene Expression
+  guide_capture: CRISPR Guide Capture
+qc:
+  min_features: 200
+  max_features: 7500
+  max_percent_mito: 20
+  min_cells_per_gene: 3
+  doublet_detection: true
+  expected_doublet_rate: 0.06
+guides:
+  min_umi: 3
+  min_ratio_to_second: 2.0
+  max_guides_per_cell: 2
+  no_guide_label: NoGuide
+  non_targeting_regex: '(?i)NTC|non[-_ ]?target|safe'
+  validate_target_expression: true
+normalization:
+  method: SCT
+  regress: [percent.mt, S.Score, G2M.Score]
+  variable_features: 3000
+reduction:
+  npcs: 30
+  resolution: 0.5
+dge:
+  identity_column: perturbation
+  reference_level: NoGuide
+  min_cells_per_group: 10
+  method: MAST
+  min_pct: 0.05
+  logfc_threshold: 0.1
+  fdr: 0.05
+  pseudobulk: false
+  replicate_column: replicate
+pathway:
+  enabled: true
+  collections: [H, C2, C5]
+  min_size: 15
+  max_size: 500

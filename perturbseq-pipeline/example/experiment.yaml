@@ -1,0 +1,29 @@
+# Author: Mohamed Kassam
+# Date: 2026-07-19
+# Purpose: User-supplied experiment definition for metadata-driven contrasts.
+
+metadata:
+  treatment_column: treatment
+  perturbation_column: perturbation
+  replicate_column: replicate
+  optional_covariates: []
+
+references:
+  treatment: Control
+  perturbation: NonTargeting
+
+contrasts:
+  auto_generate:
+    treatment_vs_reference: true
+    perturbation_vs_reference: true
+    interaction: true
+  explicit: []
+  # Example:
+  # explicit:
+  #   - id: TreatmentA_TargetX_vs_TreatmentA_Control
+  #     numerator:
+  #       treatment: TreatmentA
+  #       perturbation: TargetX
+  #     denominator:
+  #       treatment: TreatmentA
+  #       perturbation: NonTargeting

@@ -1,0 +1,35 @@
+# Author: Mohamed Kassam
+# Date: 2026-07-19
+name: perturbseq
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.11
+  - nextflow>=24.10
+  - fastqc
+  - multiqc
+  - pandas
+  - pyyaml
+  - pytest
+  - r-base>=4.4
+  - r-optparse
+  - r-yaml
+  - r-data.table
+  - r-ggplot2
+  - r-patchwork
+  - r-pheatmap
+  - r-seurat>=5
+  - r-sctransform
+  - bioconductor-glmgampoi
+  - bioconductor-singlecellexperiment
+  - bioconductor-scdblfinder
+  - bioconductor-mast
+  - bioconductor-edger
+  - bioconductor-limma
+  - bioconductor-fgsea
+  - bioconductor-clusterprofiler
+  - bioconductor-msigdbr
+  - bioconductor-org.hs.eg.db
+  - bioconductor-org.mm.eg.db

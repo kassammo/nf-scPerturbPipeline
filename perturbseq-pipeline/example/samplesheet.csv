@@ -1,0 +1,2 @@
+sample_id,h5_path,treatment,cell_line,replicate
+SAMPLE_001,/absolute/path/to/filtered_feature_bc_matrix.h5,Control,K562,1

@@ -4,7 +4,7 @@
 **Repository prepared:** July 19, 2026  
 **Status:** Example-ready reference implementation; biological validation is required before production use.
 
-A modular Nextflow DSL2, R, and Python workflow for Perturb-seq processing and analysis. The pipeline supports guide-level QC, normalization, cell-cycle handling, differential expression, treatment-by-perturbation comparisons, and pathway enrichment. Experimental controls and contrasts are supplied through metadata and YAML configuration rather than hard-coded in source code.
+A modular Nextflow, R, and Python workflow for Perturb-seq processing and analysis. The pipeline supports guide-level QC, normalization, cell-cycle handling, differential expression, treatment-by-perturbation comparisons, and pathway enrichment. Experimental controls and contrasts are supplied through metadata and YAML configuration rather than hard-coded in source code.
 
 ## Scope
 
